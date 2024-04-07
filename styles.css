@@ -165,3 +165,31 @@ body {
 .dragon {
    background-color: #4e38e9
 }
+
+#container:has(input[value="fire"]:checked) .pokemon:not([data-type*="fire"]),
+#container:has(input[value="flying"]:checked) .pokemon:not([data-type*="flying"]),
+#container:has(input[value="bug"]:checked) .pokemon:not([data-type*="bug"]),
+#container:has(input[value="grass"]:checked) .pokemon:not([data-type*="grass"]),
+#container:has(input[value="ghost"]:checked) .pokemon:not([data-type*="ghost"]),
+#container:has(input[value="poison"]:checked) .pokemon:not([data-type*="poison"]),
+#container:has(input[value="rock"]:checked) .pokemon:not([data-type*="rock"]),
+#container:has(input[value="ground"]:checked) .pokemon:not([data-type*="ground"]),
+#container:has(input[value="normal"]:checked) .pokemon:not([data-type*="normal"]),
+#container:has(input[value="psychic"]:checked) .pokemon:not([data-type*="psychic"]),
+#container:has(input[value="electric"]:checked) .pokemon:not([data-type*="electric"]),
+#container:has(input[value="ice"]:checked) .pokemon:not([data-type*="ice"]),
+#container:has(input[value="dragon"]:checked) .pokemon:not([data-type*="dragon"]),
+#container:has(input[value="fighting"]:checked) .pokemon:not([data-type*="fighting"]),
+#container:has(input[value="water"]:checked) .pokemon:not([data-type*="water"]){
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#container:has(input:checked) #pokemon-container::before {
+    content: "no results";
+    left: 50px;
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+}
